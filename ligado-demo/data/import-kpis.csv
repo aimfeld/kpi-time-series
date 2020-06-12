@@ -1,0 +1,18 @@
+kpiID	name	label
+102000	task	Task
+102002	equipment	Equipment
+102005	team	Team
+102007	team_at_customer	Team at customer
+102009	direct_superior	Direct Superior
+102012	management	Management
+102016	work_pressure	Work pressure
+102018	processes	Processes
+102019	cooperation	Cooperation
+102020	personal_development	Personal development
+102022	communication	Communication
+102024	rewards	Rewards
+102027	job_security	Job security
+102028	image	Image
+102031	satisfaction	Satisfaction
+102033	commitment	Commitment
+102035	emotional_exhaustion	Emotional Exhaustion
