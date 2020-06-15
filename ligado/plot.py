@@ -166,12 +166,8 @@ def plot_org_node_kpi_timelines(df_kpi_values: pd.DataFrame, df_benchmarks: pd.D
         df_node = aggregator.filter_by_org_node(df_kpi_values, node)
         df_kpi_timeline = aggregator.get_kpi_timeline(df_node, df_benchmarks, kpi)
 
-        if node_id == root_node.nodeID:
-            # Using variance/10 as an error bar is a bit freestyle. It shows whether variance changes over time, though.
-            plt.errorbar(df_kpi_timeline.index, df_kpi_timeline['z_score'], df_kpi_timeline['std']**2 / 10,
-                         label=node.label, linewidth=3, elinewidth=1, errorevery=2)
-        else:
-            df_kpi_timeline.plot(kind='line', y='z_score', label=node.label, ax=ax, linewidth=1)
+        linewidth = 3 if node_id == root_node.nodeID else 1
+        df_kpi_timeline.plot(kind='line', y='z_score', label=node.label, ax=ax, linewidth=linewidth)
 
     # Mark traffic light areas
     ax.axhspan(cfg.threshold.z_yellow * kpi.polarity, cfg.threshold.z_red * kpi.polarity, color=(1, 0.8, 0, 0.2))
