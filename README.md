@@ -11,23 +11,34 @@ demonstrate the approach and algorithms, using synthetic data.
 
 - In order to calculate robust KPI timelines based on sparse survey data, a 
 [moving average](https://en.wikipedia.org/wiki/Moving_average) algorithm is implemented.
+![](img/satisfaction.png)
 - KPI benchmarks are calculated based on survey data. These benchmarks are used to compare
 organization units with each other and to quantify deviations from the KPI mean within the 
 organization.
 - Deviations from the KPI mean are quantified based on effect sizes and their statistical significance
-(one-sample t-test against the benchmark).
+(one-sample t-test against the benchmark). Medium effects fall within yellow zone and critical effects
+fall within the red zone.
 - A [nested set model](https://en.wikipedia.org/wiki/Nested_set_model) is used to represent the 
 tree structure of the organizational unit hierarchy. This model allows for effizient querying and 
 filtering data for specific units and sub-trees.
 and parsing.
-<img src="img/nested-set-model.png" width="100">
+![](img/nested-set-model.png)
+- Participation statistics are calculated for each organization node.
+ ![](img/participation.png)
+- The KPI data is scanned with several filter combinations to identify time periods with critical
+KPI deviations. 
+ ![](img/alerts.png)
+ - For more, see the [ligado-demo jupyter notebook](https://github.com/aimfeld/kpi-time-series/blob/master/ligado/ligado-demo/ligado-demo.html) html file.
+
 
 ## Technical challenges
 
 - Handle different data sources: remote DB, local DB, or .csv files.
-- Setup for sub-project specific jupyter notebooks sharing the same code base (ligado).
-- Using .env files to extract security-sensitive credentials.
-- Extracting extendable configuration into classes.
+- Setup for [sub-project](https://github.com/aimfeld/kpi-time-series/tree/master/ligado-demo) 
+specific jupyter notebooks sharing the [same code base](https://github.com/aimfeld/kpi-time-series/tree/master/ligado).
+- Using [.env](https://github.com/aimfeld/kpi-time-series/blob/master/.env.dist) files to extract security-sensitive 
+credentials from version control.
+- Extracting extendable [configuration](https://github.com/aimfeld/kpi-time-series/blob/master/ligado/config.py) into classes.
 
 ## Setup
 
