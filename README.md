@@ -27,7 +27,8 @@ and parsing.
 - The KPI data is scanned with several filter combinations to identify time periods with critical
 KPI deviations. 
  ![](img/alerts.png)
- - For more, see the [ligado-demo jupyter notebook](https://github.com/aimfeld/kpi-time-series/blob/master/ligado-demo/ligado-demo.ipynb).
+ - For more, see the [ligado-demo jupyter notebook](https://github.com/aimfeld/kpi-time-series/blob/master/ligado-demo/ligado-demo.ipynb)
+ or the [html version](https://htmlpreview.github.io/?https://github.com/aimfeld/kpi-time-series/blob/master/ligado-demo/ligado-demo.html).
 
 
 ## Technical challenges
