@@ -22,7 +22,6 @@ fall within the red zone.
 tree structure of the organizational unit hierarchy. This model allows for effizient querying and 
 filtering data for specific units and sub-trees.
 and parsing.
-![](img/nested-set-model.png)
 - Participation statistics are calculated for each organization node.
  ![](img/participation.png)
 - The KPI data is scanned with several filter combinations to identify time periods with critical
